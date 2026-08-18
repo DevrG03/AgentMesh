@@ -147,16 +147,16 @@ The engine was evaluated using a dedicated micro-benchmark suite (`benchmarks/be
 
 ### Benchmark Results Summary
 
-| Benchmark Suite                        | Workload Profile                         | Total Execution Time | Measured Throughput / Latency |
-| :------------------------------------- | :--------------------------------------- | :------------------- | :---------------------------- |
-| **1. Pure Task Scheduling Throughput** | 10,000 No-Op tasks on 8 worker threads   | 288.03 ms            | **34,718 tasks / sec**        |
-| **2. Scheduling Lag (Chain Depth)**    | 1,000 serial task dependency hops        | 34.33 ms             | **34.33 microseconds / hop**  |
-| **3. Wide Fan-Out / Fan-In DAG**       | 1 Root -> 2,000 Parallel Tasks -> 1 Join | 98.14 ms             | **20,400 tasks / sec**        |
-| **4. Crash Recovery Reconstruction**   | 1,000 interrupted active workflows       | 25.71 ms             | **38,893 workflows / sec**    |
-| **5. Multi-Core Scaling (1 Thread)**   | 2,000 synthetic compute tasks            | 115.43 ms            | Baseline (1.00x)              |
-| **5. Multi-Core Scaling (2 Threads)**  | 2,000 synthetic compute tasks            | 65.86 ms             | **1.75x speedup**             |
-| **5. Multi-Core Scaling (4 Threads)**  | 2,000 synthetic compute tasks            | 45.75 ms             | **2.52x speedup**             |
-| **5. Multi-Core Scaling (8 Threads)**  | 2,000 synthetic compute tasks            | 34.51 ms             | **3.34x speedup**             |
+| Benchmark Suite | Workload Profile | Total Execution Time | Measured Throughput / Latency |
+| :--- | :--- | :--- | :--- |
+| **1. Pure Task Scheduling Throughput** | 10,000 No-Op tasks on 8 worker threads | 288.03 ms | **34,718 tasks / sec** |
+| **2. Scheduling Lag (Chain Depth)** | 1,000 serial task dependency hops | 34.33 ms | **34.33 microseconds / hop** |
+| **3. Wide Fan-Out / Fan-In DAG** | 1 Root -> 2,000 Parallel Tasks -> 1 Join | 98.14 ms | **20,400 tasks / sec** |
+| **4. Crash Recovery Reconstruction** | 1,000 interrupted active workflows | 25.71 ms | **38,893 workflows / sec** |
+| **5. Multi-Core Scaling (1 Thread)** | 2,000 synthetic compute tasks | 115.43 ms | Baseline (1.00x) |
+| **5. Multi-Core Scaling (2 Threads)** | 2,000 synthetic compute tasks | 65.86 ms | **1.75x speedup** |
+| **5. Multi-Core Scaling (4 Threads)** | 2,000 synthetic compute tasks | 45.75 ms | **2.52x speedup** |
+| **5. Multi-Core Scaling (8 Threads)** | 2,000 synthetic compute tasks | 34.51 ms | **3.34x speedup** |
 
 ### Key Performance Highlights
 
@@ -181,7 +181,7 @@ The codebase strictly follows the five **SOLID** principles of software architec
 ## 9. Directory Structure
 
 ```text
-AgentMesh/
+Phase1/
 ├── CMakeLists.txt              # Root build configuration for CMake
 ├── README.md                   # Complete documentation and benchmarks
 ├── apps/
@@ -259,9 +259,9 @@ AgentMesh/
 
 ### Step-by-Step Build Commands
 
-1. Open your terminal and navigate to the `AgentMesh` folder:
+1. Open your terminal and navigate to the project directory:
    ```bash
-   cd AgentMesh
+   cd Phase1
    ```
 
 2. Create and enter a dedicated build directory:
