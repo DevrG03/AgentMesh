@@ -68,6 +68,11 @@ add_executable(agentmesh_app apps/main.cpp)
 set_target_properties(agentmesh_app PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/apps")
 target_link_libraries(agentmesh_app PRIVATE agentmesh_scheduler agentmesh_execution agentmesh_persistence agentmesh_graph agentmesh_domain agentmesh_utils)
 
+# Performance Benchmark Suite
+add_executable(benchmark_engine benchmarks/benchmark_engine.cpp)
+set_target_properties(benchmark_engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/benchmarks")
+target_link_libraries(benchmark_engine PRIVATE agentmesh_scheduler agentmesh_execution agentmesh_persistence agentmesh_graph agentmesh_domain agentmesh_utils)
+
 # Enable Testing
 enable_testing()
 
