@@ -155,7 +155,7 @@ The codebase strictly follows the five **SOLID** principles of software architec
 ## 8. Directory Structure
 
 ```text
-Phase1/
+AgentMesh/
 ├── CMakeLists.txt              # Root build configuration for CMake
 ├── README.md                   # Complete documentation
 ├── apps/
@@ -231,9 +231,9 @@ Phase1/
 
 ### Step-by-Step Build Commands
 
-1. Open your terminal and navigate to the `Phase1` folder:
+1. Open your terminal and navigate to the `AgentMesh` folder:
    ```bash
-   cd Phase1
+   cd AgentMesh
    ```
 
 2. Create and enter a dedicated build directory:
